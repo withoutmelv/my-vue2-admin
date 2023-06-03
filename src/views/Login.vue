@@ -55,7 +55,7 @@
           if (valid) {
             this.$store.dispatch("user/login", this.param).then(() => {
               this.loginLoading = false;
-              this.$router.push({ name: "home" });
+              this.$router.push({ name: "Home" });
             });
           } else {
             this.loginLoading = false;

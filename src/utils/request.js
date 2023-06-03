@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { MessageBox, Message } from 'element-ui'
 import store from '@/store'
-console.log('xxx', process.env.VUE_APP_BASE_API)
+
 const service = axios.create({
     baseURL: process.env.VUE_APP_BASE_API,
     timeout: 10000,

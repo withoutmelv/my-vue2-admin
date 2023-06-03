@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import Layout from '@/layout/index.vue'
 import store from '@/store'
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/login',
     name: 'Login',
@@ -32,9 +32,16 @@ export const permissionRoutes = [
       {
         path: 'home',
         name: 'Home',
-        meta: {}
+        meta: { title: '首页', icon: 'el-icon-s-home', needCache: true, fixed: true},
+        component: () => import('@/views/Home.vue')
       }
     ]
+  },
+  {
+    path: '*',
+    name: 'Error',
+    hidden: true,
+    redirect: '/404',
   }
 ]
 
@@ -43,6 +50,14 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+export function resetRouter() {
+  const newRouter = new VueRouter({
+    scrollBehavior: () => ({y: 0}),
+    routes: routes
+  })
+  router.matcher = newRouter.matcher
+}
 
 router.beforeEach((to, from, next) => {
   const whiteList = ['Login', 'NotFund']
