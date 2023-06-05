@@ -1,10 +1,6 @@
 <template>
-    <div class="box t-center">
-      <img src="@/assets/img/snail.png" alt="" />
-      <h1 class="home pt_20 t-center font-size-20 c-3477F2">
-        {{ message }}
-      </h1>
-    </div>
+    <iframe src="https://lv-form-design.vercel.app/" height="1000px" width="100%"></iframe>
+    
   </template>
   
   <script>
@@ -12,7 +8,6 @@
     name: "Home",
     data() {
       return {
-        message: "Welcome to vue2-element-admin by running snail!"
       };
     }
   };

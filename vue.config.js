@@ -21,7 +21,7 @@ module.exports = {
     port: port,
     open: false,
     https: false,
-    hotOnly: false,
+    // hotOnly: false,
   },
   configureWebpack: {
     resolve: {

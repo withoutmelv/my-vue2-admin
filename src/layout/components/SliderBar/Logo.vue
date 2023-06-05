@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-align-center logo_box">
     <div class="logo"></div>
-    <h1 class="pl_20 c_fff font-size-14">vue2-element-admin</h1>
+    <h1 class="pl_20 c_fff font-size-14">my-vue2-admin</h1>
   </div>
 </template>
 
