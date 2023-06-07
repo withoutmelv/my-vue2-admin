@@ -1,6 +1,6 @@
 <template>
-    <iframe src="https://lv-form-design.vercel.app/" height="1000px" width="100%"></iframe>
-    
+    <!-- <iframe src="https://lv-form-design.vercel.app/" height="1000px" width="100%"></iframe> -->
+    <lv-form-design></lv-form-design>
   </template>
   
   <script>
